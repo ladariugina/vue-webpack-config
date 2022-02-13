@@ -15,7 +15,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         static: {
-          directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, 'public'),
         },
         open: true,
         compress: true,
@@ -24,7 +24,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-          template: './public/index.html'
+            template: './public/index.html'
         }),
         new VueLoaderPlugin(),
         new CleanWebpackPlugin()
@@ -46,13 +46,13 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                  {
+                {
                     loader: 'file-loader',
                     options: {
-                      limit: 5000,
-                      name: 'img/[hash].[ext]'
+                        limit: 5000,
+                        name: 'img/[hash].[ext]'
                     }
-                  }
+                }
                 ]
             },
             /** Styles **/
